@@ -1,64 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+/* @theme {
+	--glow-color: #7c3aed;
+	--color-glow: color-mix(in srgb, var(--glow-color) calc(<alpha-value> * 100%), transparent)
+} */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
-	padding: 0;
+	/* padding: 0; */
 	border: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-/* 
+
+::-webkit-scrollbar {
+	width: 0.5em;
+}
+
+::-webkit-scrollbar-track {
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 10px;
+}
+
 body {
-  margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: #212121;
+	margin: 0;
+	min-width: 320px;
+	min-height: 100vh;
+	background-color: #131313;
+	font-family: "Libre Baskerville", serif;
+	user-select: none;
+	position: relative;
+	background-image: radial-gradient(black 1px, transparent 0);
+	background-position: -19px -19px;
+}
+
+.glow-overlay {
+	pointer-events: none;
+	position: absolute;
+	inset: 0;
+	overflow: hidden;
+	transform: translate(-50%, -50%);
+	will-change: transform;
+}
+
+/* .glow-overlay {
+	--glow-size: 25rem;
+	pointer-events: none;
+	user-select: none;
+	position: absolute;
+	inset: 0;
+	opacity: var(--glow-opacity, 0);
+	mask: radial-gradient(
+		var(--glow-size) var(--glow-size) at var(--glow-x) var(--glow-y),
+		var(--glow-color) 1%,
+		transparent 50% 
+	);
+	transition: 400ms mask ease;
+	will-change: mask;
 } */
 
 h1 {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1;
-  font-weight: 600;
-  font-size: 15em;
-  letter-spacing: -15px;
+	font-family: "Noto Sans", sans-serif;
+	/* line-height: 0.79; */
+	font-weight: 600;
+	font-size: 10em;
+	letter-spacing: -8px;
+	margin-right: 2px;
+}
+
+#colon {
+	background-color: white;
+	background-clip: text;
+	-webkit-text-stroke-color: transparent;
+	-webkit-text-stroke-width: calc(0.42em/20);
+	-webkit-background-clip: text;
+	font-size: 10em;
+	color: #181818;
+	padding-left: 10px;
+}
+
+p {
+	font-size: 2em;
+}
+
+#greeting {
+	color: #181818;
+	font-style: italic;
+	font-size: 1.7em;
+}
+
+#web-developer {
+	font-style: italic;
+	font-size: 4.5em;
+}
+
+h2 {
+	color: white;
+	font-size: 3em;
 }

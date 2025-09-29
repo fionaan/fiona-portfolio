@@ -1,10 +1,26 @@
 export default function Intro() {
   return (
     <>
-      <article className="flex flex-column justify-center bg-red-100 h-screen">
-        <h1 className="text-transparent bg-clip-text bg-radial from-[rgb(255,0,212)] from-50% to-[rgb(183,0,255)]">Fiona</h1>
-      </article>
+      <div className="flex flex-col justify-end h-screen pb-4">
+        {/* <div className="p-2 bg-linear-to-tr from-violet-500 to-pink-600 size-fit">
+          <p className="" id="greeting">
+            hey i'm
+          </p>
+        </div> */}
+        <div className="pl-3">
+          {/* <div className="flex relative"> */}
+            <h1 className="text-white">
+              Fiona
+            </h1>
+            {/* <span id="colon" className="absolute left-101 -top-1">
+              :
+            </span> */}
+          {/* </div> */}
+          <p className="text-white" id="web-developer">
+            Web Developer
+          </p>
+        </div>
+      </div>
     </>
-  )
+  );
 }
-
