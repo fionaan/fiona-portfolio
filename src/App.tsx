@@ -1,6 +1,7 @@
 import Intro from "./components/Intro";
 import OverlayGlow from "./components/OverlayGlow";
 import TechStack from "./components/TechStack";
+import Works from "./components/Works";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
           <>
             <Intro />
             <TechStack />
+            <Works />
           </>
         }
       />

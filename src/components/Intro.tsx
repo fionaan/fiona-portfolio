@@ -7,7 +7,7 @@ export default function Intro() {
             hey i'm
           </p>
         </div> */}
-        <div className="pl-3">
+        <div>
           {/* <div className="flex relative"> */}
             <h1 className="text-white">
               Fiona
