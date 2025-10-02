@@ -1,95 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
 @import "tailwindcss";
 
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
+@theme {
+	--color-newBlack: #131313;
+}
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+img {
 	pointer-events: none;
 }
 
@@ -133,7 +49,7 @@ q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
-}
+} */
 
 ::-webkit-scrollbar {
 	width: 0.5em;
@@ -156,7 +72,7 @@ body {
 	background-color: #131313;
 	user-select: none;
 	position: relative;
-	background-image: radial-gradient(black 1px, transparent 0);
+	/* background-image: radial-gradient(black 1px, transparent 0); */
 	background-position: -19px -19px;
 	font-family: "Noto Sans", sans-serif;
 }
@@ -186,7 +102,7 @@ h1 {
 	margin-right: 2px;
 }
 
-#colon {
+/* #colon {
 	background-color: white;
 	background-clip: text;
 	-webkit-text-stroke-color: transparent;
@@ -195,7 +111,7 @@ h1 {
 	font-size: 10em;
 	color: #181818;
 	padding-left: 10px;
-}
+} */
 
 p {
 	font-size: 2em;
@@ -219,7 +135,7 @@ p {
 	font-family: "Red Hat Display", sans-serif;
 	font-style: normal;
 	text-transform: uppercase;
-	font-size: 1.7em;
+	font-size: 1.5em;
 }
 
 .title-line {
@@ -231,7 +147,7 @@ p {
 	font-family: "Red Hat Display", sans-serif;
 	color: rgba(255, 255, 255, 0.712);
 	text-align: center;
-	font-size: 1.em;
+	font-size: 1em;
 }
 
 .noise {
@@ -240,5 +156,13 @@ p {
 
 .work-title {
 	font-family: "Montserrat", sans-serif;
-	font-weight: 200;
+	font-weight: 300;
+	font-size: 3em;
+}
+
+.work-description {
+	font-family: "Red Hat Display", sans-serif;
+	color: rgba(255, 255, 255, 0.70);
+	font-size: 1em;
+	line-height: 1.3;
 }
