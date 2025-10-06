@@ -2,7 +2,7 @@ import { technologies } from "../constants/data";
 
 export default function TechStackTable() {
   return (
-    <div className="flex flex-wrap gap-4 gap-y-10 h-fit w-[50%]">
+    <div className="flex flex-wrap gap-3 gap-y-10 h-fit w-[50%]">
       {technologies.map((tech) => (
           <div className="flex flex-col">
             <img

@@ -61,7 +61,7 @@ export default function WorkRow({ title, description, img, techs }: workType) {
         transition={{duration: 0.3, ease: "easeOut"}}
         src={img.src}
         alt={img.alt}
-        className="absolute w-[35%] top-0 right-0"
+        className="absolute w-[38%] top-0 right-0"
       />
     </motion.div>
   );
