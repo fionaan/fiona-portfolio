@@ -1,11 +1,12 @@
 import { TechStack, type techType, type workTypeArray } from "../types/global_types";
 import mercAirlines from "@/assets/works/homepage.png"
+import centrotech from "@/assets/works/centrotech/login-page.png"
 
 export const works: workTypeArray = [
   {
     title: "MERC Airlines",
     description:
-      "If you're using Save As cairo png, you will get a white background.",
+      "Airline booking reservation system built separately using VB.Net and C++ (CLI as GUI).",
     img: {
       src: mercAirlines,
       alt: "merc-airlines-homepage",
@@ -15,10 +16,10 @@ export const works: workTypeArray = [
   {
     title: "CentroTech",
     description:
-      "If you're using Save As cairo png, you will get a white background. The proper way to make a PNG with transparent background is to use Export Bitmap, as TechieLog said.",
+      "Web-based Electronic Medical Record (EMR) System with a rule-based chatbot that helps assist medical staff in efficiently managing patient records in CEU Makati clinic.",
     img: {
-      src: "",
-      alt: "",
+      src: centrotech,
+      alt: "centrotech-login-page",
     },
     techs: [TechStack.mongodb, TechStack.express, TechStack.react, TechStack.nodejs, TechStack.tailwindcss, TechStack.mongoose]
   },

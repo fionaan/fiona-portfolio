@@ -5,7 +5,7 @@ import TechLabelBar from "./TechLabelBar";
 export default function WorkRow({ title, description, img, techs }: workType) {
   const container = {
     noHover: {
-      height: "22vmin",
+      height: "26vmin",
     },
     hover: {
       height: "32vmin",
@@ -25,22 +25,36 @@ export default function WorkRow({ title, description, img, techs }: workType) {
     }
   }
 
+  const desc = {
+    noHover: {
+      maxHeight: "5.7vmin",
+      WebkitLineClamp: 2
+    },
+    hover: {
+      maxHeight: "9vmin",
+      WebkitLineClamp: "unset"
+    }
+  }
+
   return (
     <motion.div
       variants={container}
       initial="noHover"
       whileHover="hover"
       transition={{duration: 0.3, ease: "easeOut"}}
-      className="relative flex justify-between border-b-1 border-b-white/20 mt-7 overflow-hidden"
+      className="relative flex justify-between border-b-1 border-b-white/20 overflow-hidden"
     >
       <div className="flex flex-col justify-end gap-y-2 w-[70%] pb-3">
-        <TechLabelBar labels={techs}/>
         <p className="work-title text-transparent bg-clip-text bg-linear-to-r from-white to-newBlack from-60% w-[80%] overflow-hidden whitespace-nowrap">
           {title}
         </p>
-        <p className="work-description w-[70%] overflow-hidden text-ellipsis max-h-15">
+        <motion.p
+        variants={desc} 
+        transition={{duration: 0.3, ease: "easeOut"}}
+        className="work-description w-[70%] overflow-hidden line-clamp-2">
           {description}
-        </p>
+        </motion.p>
+        <TechLabelBar labels={techs}/>
       </div>
       <motion.img
         variants={image}

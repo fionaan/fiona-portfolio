@@ -10,25 +10,29 @@ export default function OverlayGlow({ children }: ChildrenProps) {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      const xTo = gsap.quickTo(glowRef.current, "x", {
+      const glow = glowRef.current;
+      if (!glow) return;
+      const glowSize = glow.offsetWidth / 2;
+
+      const xTo = gsap.quickTo(glow, "x", {
         duration: 0.6,
         ease: "power3",
       });
 
-      const yTo = gsap.quickTo(glowRef.current, "y", {
+      const yTo = gsap.quickTo(glow, "y", {
         duration: 0.6,
         ease: "power3",
       });
 
       window.addEventListener("mousemove", (e) => {
-        xTo(e.clientX);
-        yTo(e.clientY);
+        xTo(e.clientX - glowSize);
+        yTo(e.clientY - glowSize);
       });
 
       return () => {
         window.removeEventListener("mousemove", (e) => {
-          xTo(e.clientX);
-          yTo(e.clientY);
+          xTo(e.clientX - glowSize);
+          yTo(e.clientY - glowSize);
         });
       };
     });
@@ -38,7 +42,7 @@ export default function OverlayGlow({ children }: ChildrenProps) {
   return (
     <>
       <div
-        className="pointer-events-none fixed left-0 top-0 aspect-square w-[50vmin] -translate-x-1/2 -translate-y-1/2 overflow-hidden rounded-full will-change-transform"
+        className="pointer-events-none fixed left-0 top-0 aspect-square w-[50vmin] overflow-hidden rounded-full will-change-transform"
         aria-hidden="true"
         ref={glowRef}
       >
