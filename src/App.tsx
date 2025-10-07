@@ -1,3 +1,4 @@
+import Contact from "./components/Contact";
 import Intro from "./components/Intro";
 // import NavBar from "./components/Navbar";
 import OverlayGlow from "./components/OverlayGlow";
@@ -13,6 +14,7 @@ function App() {
             <Intro />
             <TechStack />
             <Works />
+            <Contact />
             {/* <NavBar /> */}
           </>
         }
