@@ -9,8 +9,8 @@ export default function WorkRow({ title, description, img, techs }: workType) {
     },
     hover: {
       height: "32vmin",
-    }
-  }
+    },
+  };
 
   const image = {
     noHover: {
@@ -21,27 +21,27 @@ export default function WorkRow({ title, description, img, techs }: workType) {
     hover: {
       opacity: 1,
       y: 0,
-      // scale: 1.1
-    }
-  }
+      // scale: 1
+    },
+  };
 
   const desc = {
     noHover: {
       maxHeight: "5.7vmin",
-      WebkitLineClamp: 2
+      WebkitLineClamp: 2,
     },
     hover: {
       maxHeight: "9vmin",
-      WebkitLineClamp: "unset"
-    }
-  }
+      WebkitLineClamp: "unset",
+    },
+  };
 
   return (
     <motion.div
       variants={container}
       initial="noHover"
       whileHover="hover"
-      transition={{duration: 0.3, ease: "easeOut"}}
+      transition={{ duration: 0.3, ease: "easeOut" }}
       className="relative flex justify-between border-b-1 border-b-white/20 overflow-hidden"
     >
       <div className="flex flex-col justify-end gap-y-2 w-[70%] pb-3">
@@ -49,20 +49,24 @@ export default function WorkRow({ title, description, img, techs }: workType) {
           {title}
         </p>
         <motion.p
-        variants={desc} 
-        transition={{duration: 0.3, ease: "easeOut"}}
-        className="work-description w-[70%] overflow-hidden line-clamp-2">
+          variants={desc}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          className="work-description w-[70%] overflow-hidden line-clamp-2"
+        >
           {description}
         </motion.p>
-        <TechLabelBar labels={techs}/>
+        <TechLabelBar labels={techs} />
       </div>
-      <motion.img
-        variants={image}
-        transition={{duration: 0.3, ease: "easeOut"}}
-        src={img.src}
-        alt={img.alt}
-        className="absolute w-[38%] top-0 right-0"
-      />
+      <div className="">
+        <motion.img
+          variants={image}
+          transition={{ duration: 0.3, ease: "easeOut" }}
+          style={{ transformOrigin: "center center" }}
+          src={img.src}
+          alt={img.alt}
+          className="absolute h-full top-0 right-0"
+        />
+      </div>
     </motion.div>
   );
 }

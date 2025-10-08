@@ -18,7 +18,7 @@ export default function LinkTray() {
         <a href="https://www.linkedin.com/in/fiona-anlei-mariano/" target="_blank" rel="noopener noreferrer">
           <ImLinkedin2 />
         </a>
-        <div className="w-[0.12em] h-[3.5em] bg-newFuchsia" />
+        <div className="w-[0.12em] h-[3.9em] bg-newFuchsia" />
       </div>
     </IconContext.Provider>
   )
