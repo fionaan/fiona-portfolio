@@ -4,11 +4,11 @@ import WorkRow from "./WorkRow";
 
 export default function Works () {
     return (
-        <div className="h-fit px-45">
+        <section className="h-fit px-45">
             <SectionTitle title="Works"/>
             {works.map(w => (
                 <WorkRow title={w.title} description={w.description} img={w.img} techs={w.techs}/>
             ))}
-        </div>
+        </section>
     )
 }

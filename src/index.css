@@ -2,6 +2,9 @@
 @import "tailwindcss";
 
 @theme {
+	--breakpoint-sm: 37.5rem;
+	--breakpoint-md: 63.438rem;
+
 	--color-newBlack: #131313;
 	--color-newFuchsia: #b91d73;
 	--color-newPink: #f953c6;
@@ -18,7 +21,6 @@ img {
 }
 
 /* HTML5 display-role reset for older browsers */
-article,
 aside,
 details,
 figcaption,
@@ -27,8 +29,7 @@ footer,
 header,
 hgroup,
 menu,
-nav,
-section {
+nav {
 	display: block;
 }
 

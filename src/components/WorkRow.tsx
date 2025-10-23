@@ -37,7 +37,7 @@ export default function WorkRow({ title, description, img, techs }: workType) {
   };
 
   return (
-    <motion.div
+    <motion.article
       variants={container}
       initial="noHover"
       whileHover="hover"
@@ -67,6 +67,6 @@ export default function WorkRow({ title, description, img, techs }: workType) {
           className="absolute h-full top-0 right-0"
         />
       </div>
-    </motion.div>
+    </motion.article>
   );
 }
