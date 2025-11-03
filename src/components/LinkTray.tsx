@@ -5,10 +5,9 @@ import { ImLinkedin2 } from "react-icons/im";
 
 export default function LinkTray() {
   return (
-
     <IconContext.Provider
       value={{ className: 'text-newFuchsia', size: '1.5em' }}>
-      <div className="flex flex-col items-center fixed bottom-0 gap-y-5 left-12 z-3">
+      <div className="flex flex-col items-center absolute -bottom-12 md:fixed md:bottom-0 gap-y-5 left-12 z-3">
         <a href="https://github.com/fionaan" target="_blank" rel="noopener noreferrer">
           <IoLogoGithub />
         </a>

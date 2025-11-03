@@ -1,8 +1,13 @@
 import { motion } from "motion/react";
 import type { workType } from "../types/global_types";
 import TechLabelBar from "./TechLabelBar";
+import useIsMobile from "../hooks/useIsMobile";
 
 export default function WorkRow({ title, description, img, techs }: workType) {
+
+  const isMobile = useIsMobile(1014);
+
+  // Variants
   const container = {
     noHover: {
       height: "26vmin",
@@ -36,6 +41,8 @@ export default function WorkRow({ title, description, img, techs }: workType) {
     },
   };
 
+  const Img = isMobile ? 'img' : motion.img;
+
   return (
     <motion.article
       variants={container}
@@ -57,16 +64,13 @@ export default function WorkRow({ title, description, img, techs }: workType) {
         </motion.p>
         <TechLabelBar labels={techs} />
       </div>
-      <div className="">
-        <motion.img
-          variants={image}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          style={{ transformOrigin: "center center" }}
-          src={img.src}
-          alt={img.alt}
-          className="absolute h-full top-0 right-0"
-        />
-      </div>
-    </motion.article>
-  );
+      <Img
+        variants={isMobile ? undefined : image}
+        transition={isMobile ? undefined : { duration: 0.3, ease: "easeOut" }}
+        style={isMobile ? undefined : { transformOrigin: "center center" }}
+        src={img.src}
+        alt={img.alt}
+        className={`absolute h-full top-0 right-0`}
+      />
+    </motion.article>)
 }

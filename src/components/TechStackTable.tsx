@@ -6,7 +6,7 @@ export default function TechStackTable() {
       {technologies.map((tech) => (
           <div className="flex flex-col">
             <img
-              className="p-4 aspect-square w-23 md:w-[15vmin]"
+              className="p-4 aspect-square w-20 md:w-[15vmin]"
               src={tech.image}
               alt={tech.alt}
             />

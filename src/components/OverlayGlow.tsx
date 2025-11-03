@@ -51,10 +51,10 @@ export default function OverlayGlow({ children }: ChildrenProps) {
         <div className="h-full w-full animate-spin-slow bg-gradient-to-r from-pink-700/20 to-amber-600/20"></div>
       </div>
       <div aria-hidden="true" className="fixed inset-0 backdrop-blur-3xl"></div>
-      <LinkTray />
       <Year />
       <article className="absolute z-1 w-full flex flex-col justify-between gap-47 px-3">
         {children}
+        <LinkTray />
       </article>
     </>
   );
